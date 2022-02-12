@@ -437,6 +437,8 @@ std::vector<Path>  Bezier::compute_Cubic(XY& point0, XY& point1, XY& point2, XY&
 **/
 double Bezier::compute_theta() {
     double a = 10;
+
+    // todo
     return a;
 }
 
@@ -487,7 +489,7 @@ std::vector<Path> Bezier::Smooth() {
         case FIVE_FIVE:{
             XY aide_points = compute_aide_point(this->control_Points[0][3], this->control_Points[0][4],
                                                 this->control_Points[0][5], this->control_Points[1][0], FIVE_FIVE);
-            // jiang jisuan chu de fuzhukongzhidian he qidian charudao shuzu de toubuweizhi
+            //将辅助控制点与上一段曲线的结束点插入 控制点vec
             this->control_Points[1].insert(this->control_Points[1].begin(), aide_points);
             this->control_Points[1].insert(this->control_Points[1].begin(), this->control_Points[0][5]);
 
@@ -508,7 +510,6 @@ std::vector<Path> Bezier::Smooth() {
         }
     }
 
-    // cunyi ???? todo
     else if (this->number_of_line > 2) {
 
         smooth_path = compute_Quintic(this->control_Points[0][0], this->control_Points[0][1],
@@ -520,7 +521,7 @@ std::vector<Path> Bezier::Smooth() {
         case FIVE_THREE:{
             
             for (int i=0; i < this->number_of_line-1;++i) {
-                // zhongjian de lujing you wujie pinjie ercheng  sikao!!!!!
+                //
                 if (i< this->number_of_line - 2) {
                     XY aide_point = compute_aide_point(this->control_Points[i][3], this->control_Points[i][4], 
                                                         this->control_Points[i][5], this->control_Points[i+1][0], FIVE_FIVE);
@@ -535,7 +536,7 @@ std::vector<Path> Bezier::Smooth() {
                     smooth_path.reserve(smooth_path.size() + smooth_path1.size());
                     smooth_path.insert(smooth_path.end(), smooth_path1.begin(), smooth_path1.end());
                 }
-                // zuihouyiduan you sanjie pinjie
+                // 最后一段由三阶贝塞尔拼接
                 else if (i == this->number_of_line-2) {
                     XY aide_point = compute_aide_point(this->control_Points[i][3], this->control_Points[i][4], 
                                                         this->control_Points[i][5], this->control_Points[i+1][0], FIVE_THREE);
@@ -580,7 +581,11 @@ std::vector<Path> Bezier::Smooth() {
     return smooth_path;
 };
 
-
+/**
+ * 输入： 无
+ * 输出： 无
+ * 作用： 展示所有控制点
+**/
 void Bezier::showpoints() {
     for (std::vector< std::vector<XY> >::iterator it = this->control_Points.begin();
             it!= this->control_Points.end();
