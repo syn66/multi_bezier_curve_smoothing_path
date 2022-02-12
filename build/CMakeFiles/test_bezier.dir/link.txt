@@ -1,0 +1,1 @@
+/bin/g++-9  -O2 -g   CMakeFiles/test_bezier.dir/test_bezier.cpp.o CMakeFiles/test_bezier.dir/src/bezier.cpp.o  -o test_bezier  /usr/lib/x86_64-linux-gnu/libpython3.8.so 

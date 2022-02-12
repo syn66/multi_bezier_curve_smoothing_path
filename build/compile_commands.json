@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/syn/test/build",
+  "command": "/bin/g++-9   -I/home/syn/test/. -I/home/syn/test/matplotlibcpp -I/usr/include/python3.8  -O2 -g   -std=gnu++11 -o CMakeFiles/test_bezier.dir/test_bezier.cpp.o -c /home/syn/test/test_bezier.cpp",
+  "file": "/home/syn/test/test_bezier.cpp"
+},
+{
+  "directory": "/home/syn/test/build",
+  "command": "/bin/g++-9   -I/home/syn/test/. -I/home/syn/test/matplotlibcpp -I/usr/include/python3.8  -O2 -g   -std=gnu++11 -o CMakeFiles/test_bezier.dir/src/bezier.cpp.o -c /home/syn/test/src/bezier.cpp",
+  "file": "/home/syn/test/src/bezier.cpp"
+}
+]

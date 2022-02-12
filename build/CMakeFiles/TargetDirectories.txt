@@ -1,0 +1,3 @@
+/home/syn/test/build/CMakeFiles/rebuild_cache.dir
+/home/syn/test/build/CMakeFiles/edit_cache.dir
+/home/syn/test/build/CMakeFiles/test_bezier.dir
