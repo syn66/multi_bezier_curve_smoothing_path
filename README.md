@@ -45,4 +45,4 @@
     make
 
 //TODO
-G4连续：连接处的曲率的变化率连续，且曲率无大的突变。# multi_bezier_curve_smoothing_path
+G3连续：连接处的曲率的变化率连续，且曲率无大的突变。# multi_bezier_curve_smoothing_path
